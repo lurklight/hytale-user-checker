@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ball Memories | Minecraft Vibes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="minecraft-sky"></div>
+    <section class="intro" id="intro">
+      <div class="intro__content">
+        <p class="hero__tag">Your Ball • Pixel Memories</p>
+        <h1>Ball Memories Gallery</h1>
+        <p class="hero__subtitle">
+          A Minecraft-inspired slideshow of your favorite moments.
+        </p>
+        <button class="enter" id="enter-site">Enter the gallery</button>
+      </div>
+    </section>
+
+    <main class="stage hidden" id="gallery">
+      <div class="controls-top">
+        <button class="control" id="toggle-music" aria-label="Play or pause music">
+          ♪
+        </button>
+        <button class="control" id="toggle-slideshow" aria-label="Pause slideshow">
+          ⏸
+        </button>
+        <button class="control" id="next-slide" aria-label="Next photo">
+          ⏭
+        </button>
+      </div>
+
+      <div class="frame">
+        <img id="slideshow-image" src="" alt="Ball memory" />
+      </div>
+
+      <div class="controls-bottom">
+        <button class="control" id="prev-slide" aria-label="Previous photo">
+          ⟵
+        </button>
+        <button class="control" id="next-slide-bottom" aria-label="Next photo">
+          ⟶
+        </button>
+      </div>
+
+      <div class="status">
+        <span id="track-name">Soundtrack: assets/music.mp3</span>
+        <span>Speed: <span id="speed-value">5</span>s</span>
+      </div>
+    </main>
+
+    <audio id="bg-music" loop></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
