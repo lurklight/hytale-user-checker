@@ -1,0 +1,228 @@
+:root {
+  color-scheme: dark;
+  font-size: 16px;
+  --bg: #0f1823;
+  --panel: #1a2635;
+  --accent: #3ddc97;
+  --accent-dark: #1f7a50;
+  --text: #f4f4f4;
+  --muted: #a7b4c3;
+  --border: #33485e;
+  --shadow: rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.minecraft-sky {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(180deg, #2b4a6f 0%, #152235 55%, #0b121b 100%);
+  opacity: 0.9;
+  z-index: -2;
+}
+
+.minecraft-sky::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+  opacity: 0.2;
+}
+
+.hero {
+  padding: 3.5rem 6vw 2rem;
+  text-align: center;
+}
+
+.hero__tag {
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.7rem;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+
+.hero h1 {
+  font-family: "Press Start 2P", cursive;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin: 1rem 0 0.5rem;
+}
+
+.hero__subtitle {
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.panel {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  padding: 2rem 6vw 4rem;
+  align-items: start;
+}
+
+.control-card {
+  background: var(--panel);
+  border: 2px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 40px var(--shadow);
+}
+
+.control-card h2 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.9rem;
+  margin: 0 0 0.6rem;
+}
+
+.control-card p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.audio-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+button {
+  background: var(--accent);
+  border: none;
+  color: #081b13;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button.ghost {
+  background: transparent;
+  border: 2px solid var(--border);
+  color: var(--text);
+}
+
+.volume {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: var(--muted);
+  gap: 0.3rem;
+}
+
+input[type="range"] {
+  accent-color: var(--accent);
+  width: 160px;
+}
+
+.helper {
+  margin: 0.6rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.slideshow {
+  display: grid;
+  gap: 1rem;
+}
+
+.frame {
+  position: relative;
+  background: #0d141f;
+  border: 3px solid var(--accent);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 30px 60px var(--shadow);
+  min-height: 340px;
+}
+
+.frame img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.frame__overlay {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  backdrop-filter: blur(6px);
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 0.6rem;
+}
+
+.thumb {
+  border: 2px solid transparent;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, border 0.2s ease;
+  padding: 0;
+  background: none;
+}
+
+.thumb img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+  display: block;
+}
+
+.thumb.active {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.footer {
+  text-align: center;
+  padding: 0 6vw 3rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .frame img {
+    height: 320px;
+  }
+
+  .audio-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
