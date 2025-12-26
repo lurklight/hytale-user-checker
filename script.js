@@ -10,10 +10,32 @@ const gallery = document.getElementById("gallery");
 const enterSite = document.getElementById("enter-site");
 
 const photoList = [
-  { src: "assets/photo-1.jpg", name: "Ball memory 1" },
-  { src: "assets/photo-2.jpg", name: "Ball memory 2" },
-  { src: "assets/photo-3.jpg", name: "Ball memory 3" },
-  { src: "assets/photo-4.jpg", name: "Ball memory 4" }
+  { src: "assets/photo- (1).jpg", name: "Ball memory 1" },
+  { src: "assets/photo- (2).jpg", name: "Ball memory 2" },
+  { src: "assets/photo- (3).jpg", name: "Ball memory 3" },
+  { src: "assets/photo- (4).jpg", name: "Ball memory 4" },
+  { src: "assets/photo- (5).jpg", name: "Ball memory 5" },
+  { src: "assets/photo- (6).jpg", name: "Ball memory 6" },
+  { src: "assets/photo- (7).jpg", name: "Ball memory 7" },
+  { src: "assets/photo- (8).jpg", name: "Ball memory 8" },
+  { src: "assets/photo- (9).jpg", name: "Ball memory 9" },
+  { src: "assets/photo- (10).jpg", name: "Ball memory 10" },
+  { src: "assets/photo- (11).jpg", name: "Ball memory 11" },
+  { src: "assets/photo- (12).jpg", name: "Ball memory 12" },
+  { src: "assets/photo- (13).jpg", name: "Ball memory 13" },
+  { src: "assets/photo- (14).jpg", name: "Ball memory 14" },
+  { src: "assets/photo- (15).jpg", name: "Ball memory 15" },
+  { src: "assets/photo- (16).jpg", name: "Ball memory 16" },
+  { src: "assets/photo- (17).jpg", name: "Ball memory 17" },
+  { src: "assets/photo- (18).jpg", name: "Ball memory 18" },
+  { src: "assets/photo- (19).jpg", name: "Ball memory 19" },
+  { src: "assets/photo- (20).jpg", name: "Ball memory 20" },
+  { src: "assets/photo- (21).jpg", name: "Ball memory 21" },
+  { src: "assets/photo- (22).jpg", name: "Ball memory 22" },
+  { src: "assets/photo- (23).jpg", name: "Ball memory 23" },
+  { src: "assets/photo- (24).jpg", name: "Ball memory 24" },
+  { src: "assets/photo- (25).jpg", name: "Ball memory 25" },
+  { src: "assets/photo- (26).jpg", name: "Ball memory 26" }
 ];
 
 const musicTrack = {
